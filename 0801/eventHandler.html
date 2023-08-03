@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('click')">클릭</button>
+    <button onclick="sayhello()">클릭2</button>
+    <script>
+        // 특정 함수를 할당해 실행 = 핸들러
+        function sayhello(){
+            alert('hello');
+        }
+    </script>
+
+
+    <button id="btn">클릭3</button>
+    <button id="btn2">클릭4</button>
+    <script>
+        function sayhello(){
+            alert('hello');
+        }
+
+        const el = document.getElementById('btn');
+        el.addEventListener('dblclick', sayhello);
+        // dbl -> 더블 클릭 시 ㅣ실행 
+
+        const el2 = document.getElementById('btn2');
+        // addEventListener: 특정 이벤트가 발생하면 전달되는 함수 (즉 핸들러 실행)
+        el2.addEventListener('click',()=>{
+            alert('hi');
+        })
+    </script>
+</body>
+</html>
