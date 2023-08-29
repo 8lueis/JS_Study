@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/0829/todo.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <h1>To-Do List</h1>
+            </div>
+
+            <div class="form">
+                <form action="" id="new-task-form">
+                    <input type="text" id="new-task-input" placeholder="오늘의 할 일은?" autocomplete="off">
+                    <input type="submit" id="new-task-submit" value="+">
+                </form>
+            </div>
+        </header>
+        <main>
+            <section class="task-list">
+                <div class="subTitle">
+                    <h2>할 일</h2>
+                </div>
+                <!-- list 목록 담을 박스 -->
+                <div id="tasks">
+                    <!-- <div class="task">
+                        <div class="content">
+                            <p>◯</p>
+                            <input type="text" class="text" value="공부" read-only> -->
+                            <!-- readonly -> 사용자가 수정할 수 없고 복사나 하이라이트만 가넝 -->
+                        <!-- </div>
+                        <div class="action">
+                            <button class="edit">편집</button>
+                            <button class="delete">삭제</button>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/0829/todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+/* 문서 트리의 루트 요소를 선택 */
+:root{
+/* 전역 css 변수 선언 */
+--body: rgb(233, 235, 235);
+--container: skyblue;
+}
+/* 변수 사용 */
+body{
+    background-color: var(--body);
+}
+
+*{
+    /* 마진 패딩 초기화 */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* 최소 높이를 화면에 꽉 맞게 하겠다 */
+    min-height: 100vh;
+    /* 확인 */
+    /* border: 1px solid pink; */
+    background-color: var(--container);
+    padding: 0 20px;
+    margin: 50px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+header{
+    color: white;
+    padding: 2rem 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title h1{
+    margin-bottom: 1rem;
+}
+
+.form{
+    margin-top: 2rem;
+}
+
+
+/* 반응형 만드는 중요한 부분 같음 */
+#new-task-form{
+    /* submit 버튼과 붙어 있도록 */
+    display: flex;
+}
+
+#new-task-input{
+    /* 너비 확장 (1 이상: 꽉 채움), 
+    너비 축소 (1 이상: flex item 크기에 맞춰서 줄어듦),
+    크기 결정하는 속성 flex 크기에 맞춰서 커지거나 작아지도록 */
+    flex: 1 1 0%;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    border: none;
+
+}
+
+#new-task-submit{
+    font-weight: 700;
+    font-size: 2rem;
+    /* 배경을 설정 안 해도 흰색인 이유는 
+    이 아가의 부모에게 배경화면 속성이 왔기 때문 */
+    border: none;
+    background: transparent;
+    color: var(--body);
+    cursor: pointer;
+}
+
+#new-task-submit:hover{
+    opacity: 0.8;
+}
+
+#new-task-submit:active{
+    opacity: 0.6;
+}
+
+main{
+    flex: 1 1 0%;
+}
+
+/* main > section */
+.task-list{
+    padding: 1rem;
+}
+
+.subTitle{
+    margin-bottom: 2rem;
+}
+
+.subTitle h2{
+    margin: auto;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#tasks .task .content{
+    display: flex;
+    flex: 1 1 0%;
+    /* flex일 때 아이템들을 센터로 정렬하는 두 방법 */
+    justify-content: center;
+    align-items: center;
+}
+
+#tasks .task .content .text{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    width: 100%;
+    display: block;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: var(--body);
+}
+
+#tasks .task .action{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .action button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 0.8rem;
+    border: none;
+    background-color: transparent;
+}
+
